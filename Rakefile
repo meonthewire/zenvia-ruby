@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "zenvia-ruby"
   gem.homepage = "http://github.com/leonelmorais/zenvia-ruby"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Send sms with Zenvia}
+  gem.description = %Q{ Ruby API for send sms with Zenvia}
   gem.email = "leonel.morais@yahoo.com.br"
   gem.authors = ["leonelmorais"]
   # dependencies defined in Gemfile
