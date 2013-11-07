@@ -1,2 +1,2 @@
-require 'zenvia/configuration'
-require 'zenvia/base'
+require_relative 'zenvia/configuration'
+require_relative 'zenvia/sms'
