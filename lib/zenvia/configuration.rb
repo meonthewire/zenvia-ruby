@@ -1,13 +1,13 @@
 module Zenvia
   class Configuration
     attr_accessor :account, :code, :dispatch, :from
-  end
 
-  def initialize
-    @account  = ''
-    @code     = ''
-    @dispatch = ''
-    @from     = ''
+    def initialize
+      @account  = ''
+      @code     = ''
+      @dispatch = ''
+      @from     = ''
+    end
   end
 
   class << self
@@ -15,7 +15,7 @@ module Zenvia
   end
 
   def self.configure
-    self.configuration || Configuration.new
+    self.configuration ||= Configuration.new
     yield configuration
   end
 
