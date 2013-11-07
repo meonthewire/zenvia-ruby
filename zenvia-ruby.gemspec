@@ -31,7 +31,8 @@ Gem::Specification.new do |s|
     "lib/zenvia/configuration.rb",
     "lib/zenvia/sms.rb",
     "spec/spec_helper.rb",
-    "spec/zenvia-ruby_spec.rb"
+    "spec/zenvia-ruby_spec.rb",
+    "zenvia-ruby.gemspec"
   ]
   s.homepage = "http://github.com/leonelmorais/zenvia-ruby"
   s.licenses = ["MIT"]
