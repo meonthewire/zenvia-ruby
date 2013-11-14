@@ -1,5 +1,3 @@
-require './zenvia/base'
-
 module Zenvia
   class Sms
     include Base
