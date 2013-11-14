@@ -8,7 +8,7 @@ module Zenvia
 
     private
 
-    def send_to_zenvia(cel_phone, msg)
+    def send_to_zenvia(msg, cel_phone)
       Net::HTTP.post_form URI(ZENVIA_URL),
         {
           :account  => Zenvia.configuration.account,
