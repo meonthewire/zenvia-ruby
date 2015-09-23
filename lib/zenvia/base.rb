@@ -18,10 +18,6 @@ module Zenvia
           :id       => id_sms,
           :to       => cel_phone,
           :msg      => msg
-        },
-        {
-          :content_type => 'application/json;charset=UTF-8',
-          :accept => 'application/json'
         }
     end
   end
