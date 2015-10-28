@@ -20,7 +20,7 @@ Jeweler::Tasks.new do |gem|
   gem.summary = %Q{Send sms with Zenvia}
   gem.description = %Q{ Ruby API for send sms with Zenvia}
   gem.email = "leonel.morais@yahoo.com.br"
-  gem.authors = ["leonelmorais"]
+  gem.authors = ["leonelmorais", "araanbranco"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new

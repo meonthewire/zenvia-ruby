@@ -43,7 +43,7 @@ require 'zenvia'
 
 # Sending a SMS
 
-sms = Zenvia::Sms.new('test message!', 5521999999999)
+sms = Zenvia::Sms.new('you-id', 'test message!', 5521999999999)
 sms.forward => #<Net::HTTPOK 200 OK readbody=true>
 
 ```
