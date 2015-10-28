@@ -8,6 +8,11 @@ module Zenvia
 
     private
 
+    # params {String} - id_sms
+    # params {String} - msg
+    # params {Integer} - cel_phone
+    # Example send_to_zenvia("you-id-sms", "message-in-140-caracteres", "5511111111111")
+    
     def send_to_zenvia(id_sms, msg, cel_phone)
       Net::HTTP.post_form URI(ZENVIA_URL),
         {
