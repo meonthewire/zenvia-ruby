@@ -1,4 +1,6 @@
-# Zenvia Ruby
+# Zenvia Rest Rails
+
+Ruby API to send sms with Zenvia's REST Api, based on https://github.com/lmorais/zenvia-ruby
 
 ### Download and Install
 ```
@@ -27,10 +29,10 @@ after config file created, you should define config params:
 require 'zenvia'
 
 Zenvia.configure do |config|
-  config.account  = 'your-zenvia-account'
-  config.code     = 'your-zenvia-code'
-  config.dispatch = 'zenvia dispatch method. default is (send)'
+  config.account  = ENV['ZENVIA_ACCOUNT']
+  config.code     = ENV['ZENVIA_CODE']
   config.from     = 'name of message sender. Eg. MY BUSINESS'
+  config.callbackOption = 'zenvia callback option. default is NONE'
 end
 
 ```
@@ -43,11 +45,41 @@ require 'zenvia'
 
 # Sending a SMS
 
-sms = Zenvia::Sms.new('you-id', 'test message!', 5521999999999)
-sms.forward => #<Net::HTTPOK 200 OK readbody=true>
+sms = Zenvia::Sms.new('your-sms-id', 'test message!', '5591999999999')
+
+sms.send
 
 ```
 
+### Send Return
+
+```ruby
+
+{"statusCode"=>"00",
+ "statusDescription"=>"Ok",
+ "detailCode"=>"000",
+ "detailDescription"=>"Message Sent"}
+
+```
+
+For more information about returned codes: http://docs.zenviasmsenus.apiary.io/#introduction/status-table
+
+You can also add two more parameters on 'send' method:
+
+1. schedule_date: String or DateTime
+2. aggregateId: String
+
+```ruby
+
+require 'zenvia'
+
+# Sending a SMS with schedule_date and aggregateId
+
+sms = Zenvia::Sms.new('your-sms-id', 'test message!', '5591999999999', '2016-11-22T18:13:00', '111')
+
+sms.send
+
+```
 
 ### Contributing to zenvia-rest-rails
 
@@ -57,5 +89,4 @@ sms.forward => #<Net::HTTPOK 200 OK readbody=true>
 4. Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 
 
-Copyright (c) 2012 LEONEL MORAIS. See LICENSE.txt for
-further details.
+See LICENSE.txt for further details.
