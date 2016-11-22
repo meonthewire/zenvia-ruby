@@ -10,7 +10,11 @@ module Zenvia
       @cel_phone = cel_phone
       @aggregateId = aggregateId
       @schedule_date = schedule_date
-      @schedule_date = schedule_date.strftime("%Y-%m-%dT%H:%M:%S") if !schedule_date.blank?
+      #Try to convert datetime to string
+      begin
+        @schedule_date = schedule_date.strftime("%Y-%m-%dT%H:%M:%S") if !schedule_date.blank?
+      rescue
+      end
     end
 
     def send
