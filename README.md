@@ -22,7 +22,7 @@ create zenvia config initializer
 rails g zenvia:install
 ```
 
-after config file created, you should define config params:
+after config file created (config/initializers/zenvia.rb), you should define config params:
 
 ```ruby
 
@@ -31,7 +31,7 @@ require 'zenvia'
 Zenvia.configure do |config|
   config.account  = ENV['ZENVIA_ACCOUNT']
   config.code     = ENV['ZENVIA_CODE']
-  config.from     = 'name of message sender. Eg. MY BUSINESS'
+  config.from     = 'name of message sender. Ex. MY BUSINESS'
   config.callbackOption = 'zenvia callback option. default is NONE'
 end
 
@@ -51,19 +51,6 @@ sms.send
 
 ```
 
-### Send Return
-
-```ruby
-
-{"statusCode"=>"00",
- "statusDescription"=>"Ok",
- "detailCode"=>"000",
- "detailDescription"=>"Message Sent"}
-
-```
-
-For more information about returned codes: http://docs.zenviasmsenus.apiary.io/#introduction/status-table
-
 You can also add two more parameters on 'send' method:
 
 1. schedule_date: String or DateTime
@@ -80,6 +67,19 @@ sms = Zenvia::Sms.new('your-sms-id', 'test message!', '5591999999999', '2016-11-
 sms.send
 
 ```
+
+### Send Return
+
+```ruby
+
+{"statusCode"=>"00",
+ "statusDescription"=>"Ok",
+ "detailCode"=>"000",
+ "detailDescription"=>"Message Sent"}
+
+```
+
+For more information about returned codes: http://docs.zenviasmsenus.apiary.io/#introduction/status-table
 
 ### Contributing to zenvia-rest-rails
 
