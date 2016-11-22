@@ -2,12 +2,12 @@
 
 ### Download and Install
 ```
-gem install zenvia-ruby
+gem install zenvia-rest-rails
 ```
 
 or on your Gemfile:
 ```
-gem "zenvia-ruby"
+gem "zenvia-rest-rails"
 ```
 
 and
@@ -49,7 +49,7 @@ sms.forward => #<Net::HTTPOK 200 OK readbody=true>
 ```
 
 
-### Contributing to zenvia-ruby
+### Contributing to zenvia-rest-rails
 
 1. Fork the project.
 2. Start a feature/bugfix branch.
