@@ -18,7 +18,6 @@ module Zenvia
     
     def send_to_zenvia(id_sms, cel_phone, msg, schedule_date, aggregateId)
 
-      binding.pry
       callbackOption = Zenvia.configuration.callbackOption
       callbackOption = "NONE" if callbackOption.blank?
 

@@ -14,7 +14,7 @@ module Zenvia
     end
 
     def send
-      send_to_zenvia(@id_sms, @msg, @cel_phone, @schedule_date, @aggregateId)
+      send_to_zenvia(@id_sms, @cel_phone, @msg, @schedule_date, @aggregateId)
     end
   end
 end
