@@ -9,6 +9,7 @@ module Zenvia
       @msg       = msg
       @cel_phone = cel_phone
       @aggregateId = aggregateId
+      @schedule_date = schedule_date
       @schedule_date = schedule_date.strftime("%Y-%m-%dT%H:%M:%S") if !schedule_date.blank?
     end
 
