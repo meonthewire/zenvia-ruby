@@ -22,7 +22,7 @@ create zenvia config initializer
 rails g zenvia:install
 ```
 
-after config file created (config/initializers/zenvia.rb), you should define config params:
+after config file was created on 'config/initializers/zenvia.rb', you can set your config params:
 
 ```ruby
 
