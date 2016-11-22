@@ -1,11 +1,11 @@
 module Zenvia
   class Configuration
-    attr_accessor :account, :code, :dispatch, :from
+    attr_accessor :account, :code, :callbackOption, :from
 
     def initialize
       @account  = ''
       @code     = ''
-      @dispatch = ''
+      @callbackOption = ''
       @from     = ''
     end
   end
