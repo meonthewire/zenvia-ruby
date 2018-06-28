@@ -4,7 +4,7 @@ require 'uri'
 
 module Zenvia
   module Base
-    ZENVIA_URL = 'http://www.zenvia360.com.br/GatewayIntegration/msgSms.do'
+    ZENVIA_URL = 'https://api-http.zenvia.com/GatewayIntegration/msgSms.do'
 
     private
 
@@ -12,7 +12,7 @@ module Zenvia
     # params {String} - msg
     # params {Integer} - cel_phone
     # Example send_to_zenvia("you-id-sms", "message-in-140-caracteres", "5511111111111")
-    
+
     def send_to_zenvia(id_sms, msg, cel_phone)
       Net::HTTP.post_form URI(ZENVIA_URL),
         {
